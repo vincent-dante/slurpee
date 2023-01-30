@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pink: #c36bcb;
+  --dark: #1b1b1b;
+  --casal: #296861;
+  --chinook: #a9e7b7;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+}
+
+body {
+  background-color: var(--chinook);
+  position: relative;
+  height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-slogan {
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  background: url('/slurpee-mango.png');
+  height: 100%;
+  width: 65%;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 18%;
+  left: -15%;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  background: url('/slurpee-blue.png');
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  top: 13%;
+  right: -15%;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  body::before {
+    content: '';
+    background: url('/slurpee-mango.png');
+    width: 25%;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 25%;
+    left: 0;
+  }
+
+  body::after {
+    content: '';
+    background: url('/slurpee-blue.png');
+    width: 25%;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    top: 0;
+    right: 0;
+  }
+}
